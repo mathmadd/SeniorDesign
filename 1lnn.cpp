@@ -177,24 +177,26 @@ int main()
 												};
 	string outputfile("test_output");
 
-  std::vector<float> target_prices;
-	std::vector<Cell> testneurons;
+  	std::vector<float> target_prices;
+	//std::vector<Cell> testneurons;
+	Cell testneurons;
 	testneurons.resize(20);
 
-	for (int i = 0; i < 20; i++)
-	{
-			cout << "It works\n" << endl;
-			target_prices.resize(0);
+	//for (int i = 0; i < 20; i++)
+//	{
+			//cout << "It works\n" << endl;
+	string FB_indicator_low = "FB_indicator_low";
+	target_prices.resize(0);
 			//string indicator_file(indicator_highs[i]);
 			//ifstream indicator(indicator_file);
-			set_target(target_prices, targets[i]);
+	set_target(target_prices, targets[i]);
 
-			trainCells(testneurons[i], target_prices, indicators[i], outputfile);
+	trainCells(testneurons, target_prices, FB_indicator_low, outputfile);
 
-			cout << "***********************************************************************************************" << endl;
+	cout << "***********************************************************************************************" << endl;
 			//cout << " After Training Cells" << endl;
-	}
-	cout << target_prices.size() << endl;
+
+//	cout << target_prices.size() << endl;
 	return 0;
 	//test_Neurons(testNeurons);
 }
