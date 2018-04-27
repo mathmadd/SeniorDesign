@@ -432,15 +432,14 @@ void process_data(string root_dir, string& sym, string& filename)
        for(auto &i : a)
        {
 
-        outputfiles_highs_indicators << RSI_vals[i] <<","<< StocOs_vals[i] <<","<< MACD_vals[i] <<","<< BB_vals[i] <<"," <<  target_prices_high[i] << "," << target_close[i] << endl;
-       }
-       cout << "\n\n";
-      for(auto &i : a)
-      {
-        outputfiles_lows_indicators << RSI_vals[i] <<","<< StocOs_vals[i] <<","<< MACD_vals[i] <<","<< BB_vals[i] <<"," <<  target_prices_low[i] << "," << target_close[i] << endl;
-      }
+        outputfiles_highs_indicators << RSI_vals[i] <<","<< StocOs_vals[i] <<","<< MACD_vals[i] <<","<< BB_vals[i] <<"," << target_prices_high[i] << "," << target_close[i] << endl;
+        outputfiles_lows_indicators << RSI_vals[i] <<","<< StocOs_vals[i] <<","<< MACD_vals[i] <<","<< BB_vals[i] <<","  << target_prices_low[i] << ","<< target_close[i] << endl;
 
-      cout << "\n\n";
+       }
+      
+      
+
+      
       //cout << target_close.size() << endl;
       //for(auto &i : target_close)
       // for(int i=0; i<30; i++)
