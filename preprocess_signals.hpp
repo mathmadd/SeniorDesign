@@ -413,8 +413,8 @@ void process_data(string root_dir, string& sym, string& filename)
       cout << "StocOs vector size: " << "\t\t\t"<< StocOs_vals.size() << "\n";
       cout << "MACD vector size: " << "\t\t\t"<< MACD_vals.size() << "\n";
       cout << "BB vector size: " << "\t\t\t"<< BB_vals.size() << "\n";
-      cout << "target_prices_high vector size: " << "\t"<< target_prices_high.size() <<  "\n";
-      cout << "target_prices_low vector size : " << "\t"<< target_prices_low.size() << "\n";
+      cout << "target_prices_high vector size: " << "\t" << target_prices_high.size() <<  "\n";
+      cout << "target_prices_low vector size : " << "\t" << target_prices_low.size() << "\n";
 
       //Now that indicators have been calculated, reduce the size of the closing price array (31 elements) for processing
       //by the neural network
@@ -432,12 +432,12 @@ void process_data(string root_dir, string& sym, string& filename)
        for(auto &i : a)
        {
 
-        outputfiles_highs_indicators << RSI_vals[i] <<","<< StocOs_vals[i] <<","<< MACD_vals[i] <<","<< BB_vals[i] <<"," <<  target_prices_high[i] << endl;
+        outputfiles_highs_indicators << RSI_vals[i] <<","<< StocOs_vals[i] <<","<< MACD_vals[i] <<","<< BB_vals[i] <<"," <<  target_prices_high[i] << "," << target_close[i] << endl;
        }
        cout << "\n\n";
       for(auto &i : a)
       {
-        outputfiles_lows_indicators << RSI_vals[i] <<","<< StocOs_vals[i] <<","<< MACD_vals[i] <<","<< BB_vals[i] <<"," <<  target_prices_low[i] << endl;
+        outputfiles_lows_indicators << RSI_vals[i] <<","<< StocOs_vals[i] <<","<< MACD_vals[i] <<","<< BB_vals[i] <<"," <<  target_prices_low[i] << "," << target_close[i] << endl;
       }
 
       cout << "\n\n";
